@@ -1,38 +1,16 @@
 class Solution:
-    #User function Template for python3
-    
-    #Complete this function
-    def findFloor(self, arr, x):
-        #Your code here
+    def findFloor(self, arr, target):
+        # code here
         l = 0
-        r = len(arr) - 1
+        h = len(arr) - 1
         ans = -1
-        while l <= r:
-            mid = l + (r-l)//2
-            if arr[mid] <= x:
+  
+        while l <= h:
+            mid = l + (h-l) // 2
+            if arr[mid] <= target:
                 l = mid + 1
                 ans = mid
-            else: 
-                r = mid - 1
+            else:
+                h = mid - 1
         return ans
-        
-        
-        
-        
-
-
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-if __name__ == '__main__':
-    tc = int(input())
-    while tc > 0:
-        arr = list(map(int, input().strip().split()))
-        x = int(input().strip())
-        ob = Solution()
-        ans = ob.findFloor(arr, x)
-        print(ans)
-        tc -= 1
-
-# } Driver Code Ends
+      
