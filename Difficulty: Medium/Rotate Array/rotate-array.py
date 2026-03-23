@@ -1,60 +1,28 @@
-#User function Template for python3
-
 class Solution:
-    #Function to rotate an array by d elements in counter-clockwise direction. 
-    def rotateArr(self, nums, k):
+    def rotateArr(self, arr, d):
         #Your code here
-        n = len(nums)
+        n = len(arr)
+        d = d % n
         i = 0
-        k = k % n
-        j = k-1
+        j = d - 1
         while i < j:
-            nums[i],nums[j] = nums[j],nums[i]
+            arr[i],arr[j] = arr[j],arr[i]
             i = i + 1
             j = j - 1
-        i = k
+        i = d
+        j = n-1
+        while i < j:
+            arr[i],arr[j] = arr[j],arr[i]
+            i = i + 1
+            j = j - 1
+        i = 0
         j = n - 1
         while i < j:
-            nums[i],nums[j] = nums[j],nums[i]
+            arr[i],arr[j] = arr[j],arr[i]
             i = i + 1
             j = j - 1
-        i = 0
-        j = n - 1
-        while i < j:
-            nums[i],nums[j] = nums[j],nums[i]
-            i = i + 1
-            j = j - 1
-        return nums
-
-
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-import math
-
-
-def main():
-    T = int(input())
-
-    while (T > 0):
-        A = [int(x) for x in input().strip().split()]
-        nd = [int(x) for x in input().strip().split()]
-        D = nd[0]
-        ob = Solution()
-        ob.rotateArr(A, D)
-
-        for i in A:
-            print(i, end=" ")
-
-        print()
-
-        T -= 1
-
-        print("~")
-
-
-if __name__ == "__main__":
-    main()
-
-# } Driver Code Ends
+        return arr
+            
+        
+            
+        
