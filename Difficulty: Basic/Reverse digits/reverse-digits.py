@@ -1,12 +1,12 @@
 #User function Template for python3
 
 class Solution:
-	def reverseDigits(self, x):
+	def reverseDigits(self, n):
 		# Code here
-        result = 0
-   
-        while x > 0:
-            digit = x % 10
-            result = result * 10 + digit
-            x = x // 10
-        return result
+		result = ""
+		while n > 0:
+		    digit = n % 10
+		    result = result + str(digit)
+		    n = n // 10
+		return int(result)
+		    
