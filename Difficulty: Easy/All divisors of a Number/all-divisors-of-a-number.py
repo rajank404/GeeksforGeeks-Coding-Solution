@@ -1,7 +1,7 @@
 #User function Template for python3
 
 class Solution:
-    def print_divisors(self, N):
+    def getDivisors(self, N):
         # code here
         
         # Naive solution
@@ -11,18 +11,18 @@ class Solution:
         #          print(i,end=" ")
         
         # optimal solution
-        
         temp = []
         for i in range(1,int(N**0.5)+1):
             if N % i == 0:
-                a = int(N / i)
-                if i == a:
-                    temp.append(i)
-                else:
-                    temp.append(i)
+                temp.append(i)
+                
+                a = N//i
+                if i != a:
                     temp.append(a)
-        for i in range(len(temp)):
-            print(sorted(temp)[i],end=" ")
+        temp.sort()
+        return temp
+        
+   
                 
   
         
