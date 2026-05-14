@@ -6,5 +6,5 @@ class Solution:
             for j in range(i+1,len(arr)):
                 if arr[mini] > arr[j]:
                     mini = j
-            arr[mini],arr[i] = arr[i],arr[mini]
+            arr[i],arr[mini] = arr[mini],arr[i]
         return arr
