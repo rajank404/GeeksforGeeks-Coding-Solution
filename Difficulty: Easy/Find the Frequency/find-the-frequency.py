@@ -11,7 +11,12 @@ class Solution:
                 temp[i] = 1
             else:
                 temp[i] += 1
+                
         for i,j in temp.items():
             if i == x:
                 return j
         return 0
+                
+            
+                
+        
