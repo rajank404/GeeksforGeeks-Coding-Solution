@@ -1,6 +1,7 @@
 class Solution:
     def searchInsertK(self, arr, k):
         # code here
+        # concept of lower bound 
         l = 0
         h = len(arr)-1
         ans = len(arr)
