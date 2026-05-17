@@ -1,7 +1,7 @@
 #User function Template for python3
 
 class Solution:
-    def findOnce(self,nums):
+    def single(self,nums):
         # Complete this function
           # method 1 (using hashing)
         # temp = {}
@@ -21,18 +21,3 @@ class Solution:
         return ans
 
 
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-if __name__ == '__main__':
-    t = int(input())
-
-    for _ in range(t):
-        # n = int(input())
-        arr = [int(x) for x in input().strip().split()]
-        ob = Solution()
-        print(ob.findOnce(arr))
-        print("~")
-
-# } Driver Code Ends
