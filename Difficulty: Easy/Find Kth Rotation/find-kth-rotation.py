@@ -1,17 +1,17 @@
 class Solution:
-    def findKRotation(self, arr):
+    def findKRotation(self, nums):
         # code here
+        ans = 10000000000
         l = 0
-        h = len(arr) - 1
-        ans = 1000000
+        h = len(nums)-1
         while l <= h:
-            mid = l + (h-l) // 2 
-            if arr[l] <= arr[mid]:
-                ans = min(ans,arr[l])
+            mid = l+(h-l)//2
+            if nums[l] <= nums[mid]:
+                ans = min(ans,nums[l])
                 l = mid + 1
-            elif arr[mid] <= arr[h]:
-                ans = min(ans,arr[mid])
+            elif nums[mid] <= nums[h]:
+                ans = min(ans,nums[mid])
                 h = mid - 1
         return arr.index(ans)
-        
+
         
