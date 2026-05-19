@@ -7,11 +7,9 @@ class Solution:
             mid = l + (h-l)//2
             if nums[mid] == target:
                 return True
-            
             elif nums[l] == nums[mid] and nums[mid] == nums[h]:
                 l = l + 1
                 h = h - 1
-                continue
             elif nums[l] <= nums[mid]:
                 if nums[l] <= target and target <= nums[mid]:
                     h = mid - 1
@@ -23,6 +21,5 @@ class Solution:
                 else:
                     h = mid - 1
         return False
-            
         
         
