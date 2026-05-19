@@ -1,22 +1,23 @@
 class Solution:
-    def search(self, nums, target):
+    def search(self, arr, target):
         # code here
         l = 0
-        h = len(nums)-1
+        h = len(arr)-1
         while l <= h:
-            mid = l + (h-l)//2
-            if nums[mid] == target:
+            mid = l+(h-l)//2
+            if arr[mid] == target:
                 return mid
-            elif nums[l] <= nums[mid]:
-                
-                if nums[l] <= target and target <= nums[mid]:
+            elif arr[l] <= arr[mid]:
+                if arr[l] <= target and target <= arr[mid]:
                     h = mid - 1
                 else:
                     l = mid + 1
             else:
-                if nums[mid] <= target and target <= nums[h]:
+                if arr[mid] <= target and target <= arr[h]:
                     l = mid + 1
                 else:
                     h = mid - 1
         return -1
+        
+
         
